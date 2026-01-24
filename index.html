@@ -1,74 +1,389 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona w budowie</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0099ff 0%, #ffd000 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 60px 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .logo {
-            width: 300px;
-            height: auto;
-            margin: 0 auto 40px;
-            object-fit: contain;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
-        }
-
-        h1 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .company-name {
-            font-size: 42px;
-            font-weight: bold;
-            color: #0099ff;
-            margin-top: 10px;
-        }
-
-        .dots {
-            display: inline-block;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SunClean - Renowacja dachów i elewacji</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Tu powstaje strona firmy:</h1>
-        <img src="images/logo.png" alt="Logo firmy" class="logo">
-        <div class="company-name"><span class="dots">...</span></div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="images/logo.png" alt="logo" class="logo-1"> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">STRONA GŁÓWNA</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">O NAS</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">OFERTA</a> </li>
+       <!--<li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">OPINIE</a> </li>-->
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">WYCENA</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">REALIZACJE</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">KONTAKT</a> </li>
+      </ul>
     </div>
+  </div>
+</nav>
+<!-- End Navbar --> 
+<!-------Banner Start------->
+<section class="banner" data-scroll-index='0'>
+  <div class="banner-overlay">
+    <div class="container">
+      <div class="tytul">
+          <div class="banner-text">
+            <h1 class="tytul">Odzyskaj dawny blask swojego domu</h1>
+            <h5 class="tytul">Sprawdź nas i umów się na wycenę</h5>
+          </div>
+        <div class="house"> <img src="images/house.png" alt = "rennovations around house" width = "750" height = "300" class="img-fluid wow fadeInUp"/> </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!-------Banner End-------> 
+
+<!-------About End------->
+
+<section class="about section-padding prelative" data-scroll-index='1'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h2>CZYM SIĘ ZAJMUJEMY?</h2>
+          <span class="line"></span>
+          <p>Czyszczenie i renowacja dachów oraz elewacji, czyli kompleksowa pielęgnacja budynków. Usługi SunClean obejmują zarówno mycie, jak i malowanie dachów oraz elewacji, wykonywanie elewacji budynków drewnianych, a także mycie paneli fotowoltaicznych. Staranny dobór odpowiednich metod, sprzętu i środków czyszczących pozwala nam skutecznie zadbać o każdą powierzchnię i rozprawić się nawet z najbardziej uporczywymi zabrudzeniami, przywracając budynkom świeży i estetyczny wygląd.</p>
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fa fa-search" aria-hidden="true"></i>
+                <h5>Perfekcja w każdym detalu</h5>
+                <p>Dbamy o dokładność na każdym etapie prac, od przygotowania powierzchni po finalny efekt. Zwracamy uwagę na szczegóły, które realnie wpływają na wygląd i trwałość wykonanych usług.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa fa-star" aria-hidden="true"></i>
+                <h5>Sprawdzone, profesjonalne materiały</h5>
+                <p>Pracujemy na wysokiej jakości środkach czyszczących i farbach, które są bezpieczne dla powierzchni i odporne na warunki atmosferyczne, dzięki czemu efekt utrzymuje się przez długi czas.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa fa-bolt" aria-hidden="true"></i>
+                <h5>Sprawne i terminowe realizacje</h5>
+                <p>Szanujemy Twój czas, dlatego oferujemy atrakcyjne terminy i sprawną realizację zleceń, bez zbędnych opóźnień i niespodzianek.</p>
+              </div>
+            </div>
+          </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------About End-------> 
+
+<!-------Features Start------->
+<section class="feature section-padding alt-bg" data-scroll-index='2'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h2>OFERTA</h2>
+          <span class="line"></span>
+        </div>
+
+        <div class="section-content text-center">
+          <div class="row">
+
+            <!-- LEWA KOLUMNA -->
+            <div class="col-md-6 col-sm-12">
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.1s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>Mycie elewacji</h5>
+                  <p>Mycie elewacji to szybki sposób na przywrócenie świeżego i estetycznego wyglądu budynku. Usuwamy kurz, zabrudzenia, glony i pleśń, dobierając metody i środki odpowiednie do rodzaju powierzchni. Efekt? Czysta, zadbana elewacja, która wygląda świetnie i dłużej pozostaje chroniona.</p>
+                </div>
+                <div class="media-right icon-border">
+                  <span class="fas fa-tint"></span>
+                </div>
+              </div>
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>Mycie dachów</h5>
+                  <p>Mycie dachów skutecznie usuwa zabrudzenia, mchy, porosty i osady atmosferyczne, przywracając dachowi świeży wygląd. Stosujemy bezpieczne metody i profesjonalne środki, które chronią powierzchnię i wydłużają jej żywotność.</p>
+                </div>
+                <div class="media-right icon-border">
+                  <span class="fas fa-home"></span>
+                </div>
+              </div>
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.3s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>Malowanie elewacji</h5>
+                  <p>Malowanie elewacji odświeża wygląd budynku i chroni jego powierzchnię przed czynnikami atmosferycznymi. Stosujemy trwałe farby i profesjonalne techniki, dzięki czemu elewacja wygląda estetycznie i dłużej pozostaje w doskonałym stanie.</p>
+                </div>
+                <div class="media-right icon-border">
+                  <span class="fas fa-paint-roller"></span>
+                </div>
+              </div>
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>Malowanie dachów</h5>
+                  <p>Malowanie dachów przywraca kolor i zabezpiecza powierzchnię przed wilgocią oraz działaniem słońca. Pracujemy na profesjonalnych materiałach, które gwarantują trwały efekt i poprawiają wygląd całego budynku.</p>
+                </div>
+                <div class="media-right icon-border">
+                  <span class="fas fa-paint-brush"></span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- PRAWA KOLUMNA -->
+            <div class="col-md-6 col-sm-12">
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.1s">
+                <div class="media-left icon-border media-right-margin">
+                  <span class="fas fa-tree"></span>
+                </div>
+                <div class="media-body text-left">
+                  <h5>Elewacje budynków drewnianych</h5>
+                  <p>Tworzymy estetyczne i trwałe elewacje drewniane na konstrukcji szkieletowej. Stosujemy sprawdzone materiały i techniki, które chronią drewno i podkreślają jego naturalne piękno.</p>
+                </div>
+              </div>
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                <div class="media-left icon-border media-right-margin">
+                  <span class="fas fa-solar-panel"></span>
+                </div>
+                <div class="media-body text-left">
+                  <h5>Mycie paneli fotowoltaicznych</h5>
+                  <p>Czyste panele to większa wydajność i dłuższa żywotność instalacji. Usuwamy kurz, pył i zabrudzenia bezpiecznie, korzystając z profesjonalnych metod czyszczenia.</p>
+                </div>
+              </div>
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.3s">
+                <div class="media-left icon-border media-right-margin">
+                  <span class="fas fa-th-large"></span>
+                </div>
+                <div class="media-body text-left">
+                  <h5>Mycie kostki brukowej</h5>
+                  <p>Mycie kostki brukowej przywraca jej naturalny kolor i usuwa zabrudzenia, mech czy plamy. Dzięki bezpiecznym metodom przestrzeń wokół domu wygląda estetycznie i świeżo.</p>
+                </div>
+              </div>
+
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                <div class="media-left icon-border media-right-margin">
+                  <span class="fas fa-shield-alt"></span>
+                </div>
+                <div class="media-body text-left">
+                  <h5>Impregnacja powierzchni</h5>
+                  <p>Po myciu i malowaniu zabezpieczamy powierzchnie preparatami chroniącymi przed wilgocią, brudem i czynnikami atmosferycznymi. Dzięki impregnacji powierzchnie są trwalsze i dłużej zachowują estetyczny wygląd.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------Features End-------> 
+
+<!-------CENNIK Start------->
+<section class="faq section-padding prelative" data-scroll-index='4'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="sectioner-header text-center">
+          <h2>WYCENA</h2>
+          <span class="line"></span>
+        </div>
+
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center wow fadeInUp" data-wow-delay="0.2s">
+
+              <p>Każdy budynek jest wyjątkowy – jego stan, rodzaj powierzchni i zakres prac wpływają na ostateczny koszt usług.
+                Dlatego w SunClean nie stosujemy gotowych cenników – przygotowujemy indywidualną wycenę dopasowaną do Twoich potrzeb.
+              </p>
+
+              <p>
+                Skontaktuj się z nami, a umówimy spotkanie na miejscu – obejrzymy dach, elewację lub kostkę brukową,
+                doradzimy najlepsze rozwiązania i dobierzemy optymalną metodę pracy.
+                Dzięki temu masz pewność, że otrzymasz usługę wykonaną profesjonalnie, bez kompromisów i w atrakcyjnym terminie.
+              </p>
+
+              <p style="font-weight: 900; margin-top: 15px; font-size: x-large;">
+                Zadzwoń lub napisz do nas – wspólnie zadbamy o Twój budynek!
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------CENNIK End-------> 
+
+<!-------Realizacje Start------->
+<section class="realizacje section-padding alt-bg" data-scroll-index='5'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center white">
+          <h8>REALIZACJE</h8>
+          <span class="line2"></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-------Realizacje End-------> 
+
+<!-------Contact Start------->
+<!-------Contact Start-------> 
+<section class="contact section-padding" data-scroll-index='6'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="sectioner-header">
+          <h3>KONTAKT</h3>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-6 col-md-10">
+        <div class="contact-box p-4 rounded text-white text-center">
+
+          <div class="contact-item mb-4">
+            <i class="fa fa-phone fa-2x mb-2"></i>
+            <p class="font-weight-bold mb-1">Telefon</p>
+            <p class="mb-0">
+              <a href="tel:+48500895611" class="text-white">+48 500 895 611</a>
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa fa-envelope fa-2x mb-2"></i>
+            <p class="font-weight-bold mb-1">E-mail</p>
+            <p class="mb-0">
+              <a href="mailto:bartosz.purta@icloud.com" class="text-white">bartosz.purta@icloud.com</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------Contact End-------> 
+
+
+
+
+<!-------Contact End-------> 
+
+<!-------Download End------->
+<section class="social section-padding alt-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center white">
+          <h8>ODWIEDŹ NASZE SOCIAL MEDIA!</h8>
+          <span class="line2"></span>
+          <p class="white">Bądź na bieżąco!</p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="section-content text-center">
+          <ul>
+            <li><a href="https://www.facebook.com/SunClean-Mycie-elewacji-dachów-paneli-fotowoltaicznych-61557029176410/"><img src="images/facebook.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<script src="js/scrollIt.min.js"></script> 
+<script src="js/wow.min.js"></script> 
+
+<script>
+
+  // NAVBAR: do zmiany tła po scrollu
+  (function($){
+    function checkNavbar() {
+      var navbar = $(".navbar");
+      if (!navbar.length) return;
+      if ($(window).scrollTop() > 50) {
+        navbar.addClass("nav-scroll");
+      } else {
+        navbar.removeClass("nav-scroll");
+      }
+    }
+
+    // sprawdź od razu po załadowaniu strony
+    $(window).on("load", function(){
+      checkNavbar();
+    });
+
+    // sprawdzaj przy scrollu
+    var ticking = false;
+    $(window).on("scroll", function(){
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          checkNavbar();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  })(jQuery);
+
+  // opcjonalnie scrollIt
+  $(window).on("load", function(){
+    $.scrollIt({
+      easing: 'swing',
+      scrollTime: 900,
+      activeClass: 'active',
+      onPageChange: null,
+      topOffset: -63
+    });
+  });
+</script>
+
 </body>
 </html>
+
+
+
+
+
+

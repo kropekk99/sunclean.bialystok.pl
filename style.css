@@ -1,0 +1,512 @@
+* {
+	padding:0;
+	margin:0;
+}
+
+:root {
+	--blue: #00A8E8;
+	--yellow: #FFD400;
+	--light-bg: #F7FBFF;
+	--dark-text: #1F2937;
+	--soft-gray: #E9F1F7;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	background-color: var(--light-bg);
+	color: var(--dark-text);
+}
+
+a {
+	color: var(--blue);
+}
+
+a:hover {
+	color: var(--yellow);
+}
+
+.tytul {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2, h3 {
+	font-size: xx-large;
+	font-weight: 700;
+	color: var(--blue);
+}
+
+h4, h5 {
+	font-weight:600;
+	color: var(--blue);
+}
+
+h6 {
+	font-weight:500;
+	margin-bottom: 50px;
+}
+
+h7 {
+	font-weight: 700;
+	font-size: xx-large;
+	color: var(--dark-text);
+}
+
+h8 {
+	font-weight: 700;
+	font-size: xx-large;
+	color: var(--blue);
+}
+
+.white {
+	color: var(--dark-text) !important;
+}
+
+.black {
+	color:#000000;
+}
+
+/* NAVBAR */
+
+.navbar {
+	position: fixed;
+	right: 0;
+	left: 0;
+	width: 100%;
+	min-height: 50px;
+	line-height: 50px;
+	background: rgba(255,255,255,0.9);
+	backdrop-filter: blur(6px);
+	box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+	transition: 0.3s ease;
+	z-index: 1030;
+}
+
+.navbar .nav-item a {
+	color: var(--blue);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.navbar .nav-item a:hover {
+	color: var(--yellow);
+}
+
+.nav-scroll {
+	background-color: white !important;
+	box-shadow: 0 2px 14px rgba(0,0,0,0.1) !important;
+}
+
+.navbar-nav > li > a {
+  position: relative;
+}
+
+.navbar-nav > li.active > a::after,
+.navbar-nav > li > a.active::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 0px;
+  width: 80%;
+  height: 4px;
+  background: #FFD400;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+
+/* BANNER */
+
+.banner {
+	background: linear-gradient(to top, #eaf7ff, white);
+	padding-top: 100px;
+	position: relative;
+}
+
+.banner-text {
+	margin:50px 0px 0px;
+}
+
+.house {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* SECTION HEADER */
+
+.section-padding {
+	padding:40px 0px;
+}
+
+.sectioner-header {
+	width:69%;
+	margin:0 auto;
+}
+
+.line {
+	height: 3px;
+	width: 60px;
+	background: var(--yellow);
+	display: block;
+	margin: 20px auto 20px;
+}
+
+.line::after {
+	content:"";
+	position: absolute;
+	left: 50%;
+	width: 160px;
+	height: 2px;
+	border-bottom: 2px dashed var(--yellow);
+	margin-left: -80px;
+}
+
+/* ICON BOX */
+.icon-box i {
+  display: block;
+  width: 92px;
+  height: 92px;
+  border-radius: 100px;
+  background: linear-gradient(to left, var(--blue), #41c3ff);
+  color: white;
+  font-size: 38px;
+  line-height: 92px;
+  margin: 0 auto 16px auto;
+}
+
+.icon-box h5 {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.icon-box p {
+  color: var(--dark-text);
+  font-size: 14.5px;
+  line-height: 1.65;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.about.section-padding {
+  padding: 65px 0;
+}
+
+.about .col-md-4 {
+  margin-bottom: 45px;
+}
+
+.sectioner-header p {
+  max-width: 780px;
+  margin: 18px auto 35px auto;
+  line-height: 1.75;
+}
+
+.single-feature {
+	margin-bottom: 40px;
+	margin-top: 20px;
+	display: flex;
+	align-items: flex-start;
+	min-height: 170px; /* WYRÓWNANIE WYSOKOŚCI RZĘDÓW */
+}
+
+.single-feature h5 {
+	font-size: 17px;
+	font-weight: 600;
+	color: var(--blue);
+	margin-bottom: 6px;
+}
+
+.media-right-margin {
+	margin-right: 25px;
+}
+
+.media-center-margin {
+	margin-right: 18px;
+}
+
+/* TREŚĆ */
+.single-feature .media-body {
+	flex: 1;
+}
+
+.single-feature p {
+	font-size: 14px;
+	line-height: 1.65;
+	color: #444;
+	opacity: 1;
+}
+
+/* IKONY */
+.icon-border span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 58px;
+	height: 58px;
+	border-radius: 100px;
+	color: var(--blue);
+	font-size: 22px;
+	border: 2px solid var(--blue);
+	background: white;
+	box-shadow: 0 4px 12px rgba(0, 150, 255, 0.18);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	flex-shrink: 0;
+}
+
+/* ODSTĘP IKONY OD TEKSTU */
+.media-left,
+.media-right {
+	margin-top: 6px;
+}
+
+/* hover efekt */
+.icon-border span:hover {
+	transform: scale(1.08);
+	box-shadow: 0 6px 18px rgba(0, 150, 255, 0.28);
+}
+
+/* CENNIK TABLE */
+
+.faq .section-content p {
+  max-width: 820px;
+  margin: 0 auto 18px auto;
+  line-height: 1.75;
+  color: #444;
+  font-size: 15px;
+}
+
+.faq .section-content h5 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.faq .section-content {
+  padding-top: 10px;
+}
+
+/* mocniejszy CTA na końcu */
+.faq .section-content p:last-child {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* WYCENA – idealne wyśrodkowanie */
+
+.faq .section-content .row {
+  display: flex;
+  justify-content: center;
+}
+
+.faq .section-content .col-md-10,
+.faq .section-content .col-md-12 {
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+/* szerokość tekstu + centrowanie */
+.faq .section-content p {
+  max-width: 820px;
+  margin: 0 auto 18px auto;
+  line-height: 1.75;
+  color: #444;
+  font-size: 15px;
+}
+
+/* nagłówek pomocniczy */
+.faq .section-content h5 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+/* CTA mocniej */
+.faq .section-content p:last-child {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+
+
+
+/* REALIZACJE */
+
+.realizacje {
+	background: #f1f9ff;
+}
+
+/* CONTACT */
+
+.contact {
+	background-color: white;
+	color: var(--dark-text);
+}
+
+.contact .sectioner-header h3 {
+	color: var(--blue);
+	font-weight: 700;
+}
+
+.contact .line {
+	background: var(--yellow);
+}
+
+.map-container {
+	border-radius: 10px;
+	box-shadow: 0 3px 12px rgba(0,168,232,0.25);
+}
+
+.contact-box {
+	background: linear-gradient(135deg, var(--blue), #02aefd);
+	color: white;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.contact-item i {
+	color: var(--yellow);
+}
+
+/* BUTTON */
+
+.btn-grad {
+	color: white;
+	border-radius: 2rem;
+	border: 0;
+	background: linear-gradient(to left, var(--blue), var(--yellow));
+	cursor:pointer;
+}
+
+/* ===== SOCIAL MEDIA ===== */
+
+.social {
+  background: linear-gradient(to bottom, #eaf7ff, #ffffff);
+  color: #1F2937;
+  padding: 60px 0;
+}
+
+.social .sectioner-header h8 {
+  color: #00A8E8;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.social .sectioner-header p {
+  color: #1F2937;
+  margin-top: 8px;
+  font-size: 1.15rem;
+}
+
+/* linia jak w oryginale */
+.social .line2 {
+  background: #FFD400;
+}
+
+.social .line2::after {
+  border-bottom: 2px dashed #FFD400;
+}
+
+/* IKONY – większe, ciaśniej, jak w starej wersji */
+.social .section-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px; /* ciaśniej */
+}
+
+.social .section-content ul li {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.social .section-content ul li:hover {
+  transform: scale(1.12);
+  opacity: 0.95;
+}
+
+/* WIĘKSZE IKONY */
+.social .section-content ul li img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0,168,232,0.35);
+  background: white;
+  padding: 6px;
+  transition: transform 0.2s ease;
+
+}
+
+.social .section-content ul li:hover img {
+  transform: scale(1.08);
+}
+
+/* FOOTER */
+
+.footer-copy {
+	background: white;
+	color: var(--dark-text);
+	font-size: 13px;
+	text-align: center;
+	padding:15px 0px;
+}
+
+/* MOBILE */
+
+@media all and (max-width:768px) {
+	h2 { font-size: 25px; }
+	h3 { font-size: 23px; }
+	.sectioner-header { width: 90%; }
+}
+
+/* FIX: logo w navbarze – blokada powiększania */
+.navbar-brand img,
+.logo-1 {
+  max-height: 55px;
+  width: auto !important;
+  object-fit: contain;
+}
+
+/* LOGO – większe w navbarze */
+.navbar-brand img,
+.logo-1 {
+  max-height: 90px;   /* było ~55px */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+/* lekki efekt powiększenia po scrollu */
+.nav-scroll .navbar-brand img {
+  max-height: 75px;
+}
+
+/* ===== NAPRZEMIENNE TŁA SEKCJI ===== */
+
+/* jasne sekcje – standard */
+.section-padding {
+  background: white;
+}
+
+/* delikatny błękitny gradient co druga sekcja */
+.section-padding.alt-bg {
+  background: linear-gradient(to left, #c6e9ff 0%, #ffffff 70%);
+}
+
+/* subtelne przejście między sekcjami */
+.section-padding {
+  transition: background 0.4s ease;
+}
+

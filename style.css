@@ -345,6 +345,74 @@ h8 {
 	background: #f1f9ff;
 }
 
+.realizacje-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 20px;
+}
+
+/* Kontener zdjęcia */
+.realizacja-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 14px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+	cursor: pointer;
+	background: #fff;
+}
+
+/* Domyślne zdjęcia */
+.realizacja-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.25s ease;
+}
+
+/* Hover efekt */
+.realizacja-item:hover img {
+	transform: scale(1.04);
+}
+
+/* Wymuszenie 16:9 dla wybranych zdjęć */
+.realizacja-item.ratio-16x9 {
+	aspect-ratio: 16 / 9;
+}
+
+/* Badge PRZED / PO */
+
+.realizacja-badge {
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	background: white;
+	color: var(--blue);
+	font-weight: 700;
+	font-size: 13px;
+	padding: 6px 12px;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Separator PRZED / PO */
+
+.realizacja-split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.realizacja-divider {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 4px;
+	background: #f6c500;
+	transform: translateX(-50%);
+}
+
+
 /* CONTACT */
 
 .contact {
@@ -510,3 +578,53 @@ h8 {
   transition: background 0.4s ease;
 }
 
+/* ZDJĘCIA OTWIERANE */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+  z-index: 99999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-inner {
+  position: relative;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999999;
+}

@@ -26,8 +26,8 @@
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">O NAS</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">OFERTA</a> </li>
        <!--<li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">OPINIE</a> </li>-->
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">WYCENA</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">REALIZACJE</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">REALIZACJE</a> </li> 
+       <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">WYCENA</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">KONTAKT</a> </li>
       </ul>
     </div>
@@ -202,8 +202,52 @@
 
 <!-------Features End-------> 
 
+<!-------Realizacje Start------->
+<section class="realizacje section-padding" data-scroll-index="4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h2>REALIZACJE</h2>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="realizacje-grid">
+
+      <div class="realizacja-item">
+        <img src="images/real1.png" alt="Porównanie realizacji nr 1 przed/po">
+      </div>
+
+      <div class="realizacja-item">
+        <img src="images/real2.png" alt="Porównanie realizacji nr 2 przed/po">
+      </div>
+
+      <div class="realizacja-item">
+        <img src="images/real5.png" alt="Porównanie realizacji nr 3 przed/po">
+      </div>
+
+      <div class="realizacja-item ratio-16x9">
+        <img src="images/real3.jpg" alt="Mycie elewacji budynku">
+      </div>
+
+      <div class="realizacja-item ratio-16x9">
+        <img src="images/real4.jpg" alt="Mycie paneli fotowoltaicznych">
+      </div>
+
+      <div class="realizacja-item ratio-16x9">
+        <img src="images/real6.jpg" alt="Mycie dachu budynku">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-------Realizacje End-------> 
+
+
 <!-------CENNIK Start------->
-<section class="faq section-padding prelative" data-scroll-index='4'>
+<section class="faq section-padding prelative alt-bg" data-scroll-index='5'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -241,24 +285,6 @@
 </section>
 
 <!-------CENNIK End-------> 
-
-<!-------Realizacje Start------->
-<section class="realizacje section-padding alt-bg" data-scroll-index='5'>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center white">
-          <h8>REALIZACJE</h8>
-          <span class="line2"></span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-------Realizacje End-------> 
 
 <!-------Contact Start------->
 <!-------Contact Start-------> 
@@ -320,13 +346,13 @@
         <div class="section-content text-center">
           <ul>
             <li><a href="https://www.facebook.com/SunClean-Mycie-elewacji-dachów-paneli-fotowoltaicznych-61557029176410/"><img src="images/facebook.png"></a></li>
+            <li><a href="https://share.google/Pz6gc6TPQRvjuegQz"><img src="images/google.png"></a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
@@ -377,7 +403,44 @@
       topOffset: -63
     });
   });
+
+// LIGHTBOX REALIZACJE – FIXED
+document.addEventListener('DOMContentLoaded', function () {
+  const lightbox = document.getElementById('lightbox');
+  const imgBox = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.realizacja-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      imgBox.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('active');
+    }
+  });
+});
 </script>
+
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-inner">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-img" id="lightboxImg">
+  </div>
+</div>
 
 </body>
 </html>

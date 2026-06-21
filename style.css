@@ -377,7 +377,7 @@ h8 {
 
 /* Wymuszenie 16:9 dla wybranych zdjęć */
 .realizacja-item.ratio-16x9 {
-	aspect-ratio: 16 / 9;
+	aspect-ratio: 16 / 10;
 }
 
 /* Badge PRZED / PO */
